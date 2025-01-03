@@ -17,7 +17,7 @@ Este proyecto implementa el cifrado y descifrado utilizando el algoritmo **One-T
 
 1. Clona este repositorio:
     ```bash
-
+https://github.com/TeamLabStudios/onetimepad.git
     ```
 
 2. Abre el proyecto en Visual Studio.
