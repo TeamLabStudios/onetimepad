@@ -1,0 +1,33 @@
+Public Class OneTimePad
+
+    ' Método para cifrar o descifrar un mensaje con una clave
+    Public Shared Function EncryptDecrypt(input As String, key As String) As String
+        If input.Length <> key.Length Then
+            Throw New ArgumentException("La longitud del mensaje y la clave deben ser iguales.")
+        End If
+
+        Dim result As New System.Text.StringBuilder()
+
+        For i As Integer = 0 To input.Length - 1
+            ' Aplicar XOR entre cada carácter del mensaje y la clave
+            Dim encryptedChar As Char = Chr(Asc(input(i)) Xor Asc(key(i)))
+            result.Append(encryptedChar)
+        Next
+
+        Return result.ToString()
+    End Function
+
+    ' Método para generar una clave aleatoria de la misma longitud que el mensaje
+    Public Shared Function GenerateKey(length As Integer) As String
+        Dim random As New Random()
+        Dim key As New System.Text.StringBuilder()
+
+        For i As Integer = 0 To length - 1
+            ' Generar un carácter aleatorio dentro del rango ASCII imprimible
+            key.Append(Chr(random.Next(32, 127)))
+        Next
+
+        Return key.ToString()
+    End Function
+
+End Class
