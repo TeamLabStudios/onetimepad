@@ -17,7 +17,7 @@ Este proyecto implementa el cifrado y descifrado utilizando el algoritmo **One-T
 
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/one-time-pad-vbnet.git
+
     ```
 
 2. Abre el proyecto en Visual Studio.
