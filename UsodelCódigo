@@ -1,14 +1,1 @@
-' Ejemplo de uso
-Dim mensaje As String = "Hola Mundo"
-Dim clave As String = OneTimePad.GenerateKey(mensaje.Length)
 
-Console.WriteLine("Mensaje Original: " & mensaje)
-Console.WriteLine("Clave Generada: " & clave)
-
-' Cifrar el mensaje
-Dim mensajeCifrado As String = OneTimePad.EncryptDecrypt(mensaje, clave)
-Console.WriteLine("Mensaje Cifrado: " & mensajeCifrado)
-
-' Descifrar el mensaje
-Dim mensajeDescifrado As String = OneTimePad.EncryptDecrypt(mensajeCifrado, clave)
-Console.WriteLine("Mensaje Descifrado: " & mensajeDescifrado)
